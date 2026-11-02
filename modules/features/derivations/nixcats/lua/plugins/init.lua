@@ -1,0 +1,5 @@
+require("plugins.theme")
+require("plugins.editor")
+require("plugins.completion")
+require("plugins.treesitter")
+require("plugins.godbolt")
