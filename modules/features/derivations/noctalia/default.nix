@@ -42,11 +42,15 @@
       noctalia = mkNoctalia {};
       noctaliaCherryBlossom = mkNoctalia {
         files = [./toml/leleteri.toml];
-        settings.theme.source = "community";
+        settings.theme = {
+          source = "community";
+        };
       };
       noctaliaTokyonight = mkNoctalia {
         files = [./toml/leleteri.toml];
-        settings.theme.source = "builtin";
+        settings.theme = {
+          source = "builtin";
+        };
       };
     };
   };

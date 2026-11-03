@@ -1,7 +1,14 @@
 local c = require("config.compat")
 
 c.setup("blink.cmp", {
-  keymap = { preset = "default" }, -- <C-space> open, <C-y> accept, <C-n>/<C-p> select
-  sources = { default = { "lsp", "path", "buffer" } },
-  completion = { documentation = { auto_show = true } },
+	keymap = {
+		preset = "none",
+		["<CR>"] = { "accept", "fallback" },
+		["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+		["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
+	},
+	sources = { default = { "lsp", "path", "buffer" } },
+	completion = {
+		list = { selection = { preseclect = false, auto_insert = true } },
+	},
 })

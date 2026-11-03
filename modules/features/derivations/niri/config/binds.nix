@@ -69,7 +69,8 @@
       "Mod+X".spawn-sh = "${noctalia} msg panel-toggle tordex/processes:panel name";
       "Mod+P".spawn-sh = "${noctalia} msg panel-toggle elijaharch/wl-screen-mirror:controls";
       "XF86Display".spawn = "${noctalia} msg panel-toggle elijaharch/wl-screen-mirror:controls";
-      "Mod+Escape".spawn-sh = "${noctalia} msg panel-toggle session";
+      "Mod+Escape".spawn-sh = "${noctalia} msg panel-toggle control-center";
+      "Mod+Shift+Escape".spawn-sh = "${noctalia} msg panel-toggle session";
       "Mod+Space".spawn-sh = "${noctalia} msg settings-toggle";
 
       # Screenshot
@@ -78,7 +79,7 @@
       "Alt+Print".screenshot-window = _: {};
 
       # Raise Volume
-      "Mod+BracketRight".spawn = [
+      "Mod+Equal".spawn = [
         (lib.getExe' pkgs.wireplumber "wpctl")
         "set-volume"
         "-l"
@@ -95,7 +96,7 @@
         "5%+"
       ];
       # Lower volume
-      "Mod+BracketLeft".spawn = [
+      "Mod+Minus".spawn = [
         (lib.getExe' pkgs.wireplumber "wpctl")
         "set-volume"
         "@DEFAULT_AUDIO_SINK@"
@@ -108,6 +109,12 @@
         "5%-"
       ];
       # Mutes
+      "Mod+Backspace".spawn = [
+        (lib.getExe' pkgs.wireplumber "wpctl")
+        "set-mute"
+        "@DEFAULT_AUDIO_SINK@"
+        "toggle"
+      ];
       "XF86AudioMute".spawn = [
         (lib.getExe' pkgs.wireplumber "wpctl")
         "set-mute"
@@ -121,7 +128,7 @@
         "toggle"
       ];
       # Raise brightness
-      "Mod+Equal".spawn = [
+      "Mod+Shift+Equal".spawn = [
         (lib.getExe pkgs.brightnessctl)
         "set"
         "5%+"
@@ -132,7 +139,7 @@
         "5%+"
       ];
       # Lower brightness
-      "Mod+Minus".spawn = [
+      "Mod+Shift+Minus".spawn = [
         (lib.getExe pkgs.brightnessctl)
         "set"
         "5%-"
@@ -143,7 +150,7 @@
         "5%-"
       ];
       # Turn of monitors
-      "Mod+Backspace".power-off-monitors = _: {};
+      "Mod+Shift+Backspace".power-off-monitors = _: {};
       "XF86ScreenSaver".power-off-monitors = _: {};
     };
   };

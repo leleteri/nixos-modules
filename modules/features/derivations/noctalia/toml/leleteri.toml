@@ -38,7 +38,7 @@ order = [ "default" ]
     concave_edge_corners = true
     contact_shadow = false
     enabled = true
-    end = [ "tray", "notifications", "clipboard", "wallpaper", "bar", "launcher" ]
+    end = [ "tray", "clipboard", "wallpaper", "bar", "launcher" ]
     font_scale = 1.1000000238418579
     font_weight = 500
     hover_highlight = true
@@ -60,7 +60,7 @@ order = [ "default" ]
     show_on_workspace_switch = true
     show_tooltip = true
     smart_auto_hide = false
-    start = [ "control-center", "clock", "volume", "brightness", "battery", "media" ]
+    start = [ "control-center", "clock", "volume", "brightness", "battery", "notifications", "media" ]
     thickness = 46
     widget_spacing = 6
 
@@ -595,7 +595,7 @@ umbriel_overview_type_to_launch_enabled = false
     shadow = true
     transparency_mode = "solid"
     wallpaper_placement = "attached"
-    wallpaper_position = "top_left"
+    wallpaper_position = "bottom_left"
     wallpaper_show_names = true
 
     [shell.privacy]
@@ -749,7 +749,7 @@ swap_pct_critical_threshold = 80.0
 
 [theme]
 builtin = "Tokyo-Night"
-community_palette = "Oxocarbon"
+community_palette = "Cherry Blossom"
 custom_palette = ""
 mode = "dark"
 pure_black_dark = false
@@ -765,7 +765,7 @@ wallpaper_scheme = "m3-content"
     enable_community_templates = true
 
 [wallpaper]
-directory = "/home/admin/Pictures/Wallpapers"
+directory = "/data/shared/Wallpapers/"
 directory_dark = ""
 directory_light = ""
 edge_smoothness = 0.30000001192092896
