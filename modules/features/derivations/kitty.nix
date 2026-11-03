@@ -21,6 +21,7 @@
       # background_blur = 1;
       hide_window_decorations = "yes";
       confirm_os_window_close = 0;
+      # clipboard_control = "write-clipboard write-primary read-clipboard read-primary";
     };
   };
 

@@ -9,6 +9,6 @@ c.setup("blink.cmp", {
 	},
 	sources = { default = { "lsp", "path", "buffer" } },
 	completion = {
-		list = { selection = { preseclect = false, auto_insert = true } },
+		list = { selection = { preselect = false, auto_insert = true } },
 	},
 })

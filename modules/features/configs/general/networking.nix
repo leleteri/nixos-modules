@@ -30,8 +30,12 @@
       };
     };
 
+    services.openssh = {
+      enable = true;
+      settings.X11Forwarding = true;
+    };
+
     services.tor.enable = true;
-    services.openssh.enable = true;
     services.tailscale.enable = true;
     services.mullvad-vpn.enable = true;
   };

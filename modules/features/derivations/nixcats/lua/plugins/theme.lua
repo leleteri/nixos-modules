@@ -40,14 +40,3 @@ if apply then
 else
 	vim.notify(("unknown colorscheme: %s"):format(name), vim.log.levels.WARN)
 end
-
-vim.api.nvim_set_hl(0, "NormalFloat", {
-	bg = "none",
-})
-
-local border = vim.api.nvim_get_hl(0, { name = "FloatBorder" })
-
-vim.api.nvim_set_hl(0, "FloatBorder", {
-	fg = border.fg or "none",
-	bg = "none",
-})

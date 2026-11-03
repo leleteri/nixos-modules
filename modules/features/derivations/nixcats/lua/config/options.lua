@@ -1,14 +1,14 @@
 local o = vim.o
+local g = vim.g
 
 o.autoindent = true
 o.shiftwidth = 2
 o.tabstop = 2
 o.termguicolors = true
+o.splitright = true
 
 o.spell = true
 o.spelllang = "en"
-
-o.clipboard = "unnamed,unnamedplus"
 
 o.number = true
 o.relativenumber = true
@@ -22,3 +22,20 @@ local function number_highlights()
 end
 number_highlights()
 vim.api.nvim_create_autocmd("ColorScheme", { callback = number_highlights })
+
+o.clipboard = "unnamed,unnamedplus"
+g.clipboard = {
+	name = "OSC 52",
+	copy = {
+		["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+		["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+	},
+	paste = {
+		["+"] = function()
+			return vim.split(vim.fn.getreg(""), "\n")
+		end,
+		["*"] = function()
+			return vim.split(vim.fn.getreg(""), "\n")
+		end,
+	},
+}
