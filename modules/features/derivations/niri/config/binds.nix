@@ -66,6 +66,7 @@
 
       # Noctalia
       "Mod+S".spawn-sh = "${noctalia} msg panel-toggle launcher";
+      "Mod+N".spawn-sh = "${noctalia} msg panel-toggle launcher '/nix '";
       "Mod+X".spawn-sh = "${noctalia} msg panel-toggle tordex/processes:panel name";
       "Mod+P".spawn-sh = "${noctalia} msg panel-toggle elijaharch/wl-screen-mirror:controls";
       "XF86Display".spawn = "${noctalia} msg panel-toggle elijaharch/wl-screen-mirror:controls";

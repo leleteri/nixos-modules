@@ -31,11 +31,7 @@ g.clipboard = {
 		["*"] = require("vim.ui.clipboard.osc52").copy("*"),
 	},
 	paste = {
-		["+"] = function()
-			return vim.split(vim.fn.getreg(""), "\n")
-		end,
-		["*"] = function()
-			return vim.split(vim.fn.getreg(""), "\n")
-		end,
+		["+"] = { "wl-paste", "--no-newline" },
+		["*"] = { "wl-paste", "--no-newline" },
 	},
 }

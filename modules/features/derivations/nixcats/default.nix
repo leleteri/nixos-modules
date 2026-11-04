@@ -56,13 +56,16 @@
           nvim-treesitter.withAllGrammars
           nvim-treesitter-context
           godbolt-nvim
-
-          # TODO (from the nvf config), add one line here + one setup() in Lua:
-          # fidget-nvim, indent-blankline-nvim, noice-nvim (+ nui-nvim),
-          # nvim-colorizer / nvim-highlight-colors, vim-illuminate,
-          # smartcolumn-nvim, fastaction-nvim, nvim-scrollbar, nvim-cursorline,
-          # cinnamon-nvim, highlight-undo-nvim, alpha-nvim, cheatsheet-nvim,
-          # nvim-navic + nvim-navbuddy, otter-nvim, nvim-docs-view, markview-nvim
+          fidget-nvim
+          noice-nvim
+          indent-blankline-nvim
+          # nvim-colorizer-lua
+          cinnamon-nvim
+          highlight-undo-nvim
+          # nvim-navic
+          otter-nvim
+					nvim-notify
+					markview-nvim
         ];
 
         lsp = with pkgs.vimPlugins; [

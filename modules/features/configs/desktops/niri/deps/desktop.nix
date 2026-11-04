@@ -10,6 +10,7 @@
       pkgs.gsettings-desktop-schemas
       pkgs.gnome-themes-extra
 
+      pkgs.wlinhibit
       pkgs.wl-clipboard
       pkgs.wl-gammarelay-rs
       pkgs.wl-mirror

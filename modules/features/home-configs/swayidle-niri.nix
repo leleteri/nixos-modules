@@ -28,7 +28,7 @@
         }
         {
           timeout = 330;
-          command = "${noctalia} msg screen-lock";
+          command = "${noctalia} msg session lock";
         }
         {
           timeout = 900;
