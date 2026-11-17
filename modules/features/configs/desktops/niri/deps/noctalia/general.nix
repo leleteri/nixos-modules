@@ -6,6 +6,7 @@
       pkgs.fzf
       pkgs.fd
       pkgs.bat
+      pkgs.mpvpaper
     ];
 
     networking.networkmanager.enable = true;
