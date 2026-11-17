@@ -39,6 +39,8 @@
         setopt complete_in_word always_to_end
 
         # ---- word movement / deletion ----
+        bindkey '^[[1;5A' undefined-key			 # Ctrl+Up
+        bindkey '^[[1;5B' undefined-key			 # Ctrl+Down
         bindkey '^[[1;5D' backward-word      # Ctrl+Left
         bindkey '^[[1;5C' forward-word       # Ctrl+Right (also accepts one suggestion word)
         bindkey '^[[1;3D' backward-word      # Alt+Left

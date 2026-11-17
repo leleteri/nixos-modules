@@ -1,12 +1,12 @@
 {...}: {
-  flake.nixosModules.niriEnv = {
+  flake.nixosModules.niriConfigEnv = {
     pkgs,
     lib,
     ...
   }: {
     settings = {
       spawn-at-startup = [
-        ["wl-gammarelay-rs" "run"]
+        [(lib.getExe pkgs.wl-gammarelay-rs) "run"]
       ];
       xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
       input.keyboard.xkb.layout = "us,ua";

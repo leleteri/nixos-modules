@@ -17,6 +17,7 @@
 
       self.packages.${pkgs.stdenv.hostPlatform.system}.mikuCursorLinux
     ];
+
     programs.dconf = {
       enable = true;
     };
@@ -45,7 +46,15 @@
     };
 
     environment.sessionVariables = {
-      SDL_VIDEODRIVER = "wayland";
+      NIXOS_OZONE_WL = "1";
+      _JAVA_AWT_WM_NONREPARENTING = "1";
+      QT_QPA_PLATFORM = "wayland;xcb";
     };
+
+    environment.pathsToLink = [
+      "/share/applications"
+      "/share/xdg-desktop-portal"
+      "/share/gsettings-schemas"
+    ];
   };
 }

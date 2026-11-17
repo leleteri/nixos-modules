@@ -44,15 +44,6 @@
       inputs.wrapper-modules.wrappers.niri.wrap {
         inherit pkgs;
         imports = [self.nixosModules.niriConfig settings];
-        settings = {
-          spawn-at-startup = [
-            [
-              "env"
-              "LIBVA_DRIVER_NAME=none"
-              (lib.getExe self'.packages."noctalia${name}")
-            ]
-          ];
-        };
       };
   in {
     packages =

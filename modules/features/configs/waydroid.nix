@@ -18,7 +18,7 @@
 
     environment.systemPackages = [
       inputs.nur.legacyPackages.${pkgs.stdenv.hostPlatform.system}.repos.ataraxiasjel.waydroid-script
-      self.packages.${pkgs.stdenv.hostPlatform.system}.waydroidSu
+      # self.packages.${pkgs.stdenv.hostPlatform.system}.waydroidSu
       pkgs.waydroid-helper
     ];
   };

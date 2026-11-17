@@ -1,5 +1,5 @@
 {...}: {
-  flake.nixosModules.niriBinds = {
+  flake.nixosModules.niriConfigBinds = {
     pkgs,
     lib,
     ...
@@ -14,6 +14,8 @@
       # Column and windowing
       "Mod+J".focus-column-left = _: {};
       "Mod+K".focus-column-right = _: {};
+      "Mod+WheelScrollUp" .focus-column-left = _: {cooldown-ms = 150;};
+      "Mod+WheelScrollDown". focus-column-right = _: {cooldown-ms = 150;};
 
       "Mod+Shift+J".focus-window-down = _: {};
       "Mod+Shift+K".focus-window-up = _: {};
@@ -54,10 +56,6 @@
       "Mod+7".focus-workspace = 7;
       "Mod+8".focus-workspace = 8;
       "Mod+9".focus-workspace = 9;
-      "Mod+WheelScrollUp"
-                .focus-workspace-up = _: {cooldown-ms = 150;};
-      "Mod+WheelScrollDown".
-                focus-workspace-down = _: {cooldown-ms = 150;};
 
       # Gammarelay
       "Mod+Alt+Minus".spawn = ["busctl" "--user" "call" "rs.wl-gammarelay" "/" "rs.wl.gammarelay" "UpdateBrightness" "d" "--" "-0.1"];

@@ -1,5 +1,5 @@
 {...}: {
-  flake.nixosModules.niriWindows = {
+  flake.nixosModules.niriConfigWindows = {
     settings = {
       layout = {
         focus-ring.off = _: {};

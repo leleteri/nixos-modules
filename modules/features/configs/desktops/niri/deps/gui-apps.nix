@@ -1,5 +1,5 @@
 {...}: {
-  flake.nixosModules.niriGuiApps = {pkgs, ...}: {
+  flake.nixosModules.niriDepsGuiApps = {pkgs, ...}: {
     environment.systemPackages = [
       # media
       pkgs.swayimg
@@ -16,6 +16,12 @@
       ExtensionInstallForcelist = [
         "blockddmmcjpfkbhanlgegpmjpfpfjka;https://ublock.r58playz.dev/update.xml"
       ];
+    };
+
+    # vivaldi deps (for impermanence mainly)
+    nixpkgs.config.vivaldi = {
+      proprietaryCodecs = true;
+      enableWidevine = true;
     };
   };
 }

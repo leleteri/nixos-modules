@@ -1,5 +1,5 @@
 {...}: {
-  flake.nixosModules.niriExtras = {lib, ...}: {
+  flake.nixosModules.niriConfigExtras = {lib, ...}: {
     extraSettings = [
       {hotkey-overlay.skip-at-startup = _: {};}
       {prefer-no-csd = _: {};}

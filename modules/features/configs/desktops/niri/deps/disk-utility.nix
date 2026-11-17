@@ -1,5 +1,5 @@
 {...}: {
-  flake.nixosModules.niriDisksUtil = {pkgs, ...}: {
+  flake.nixosModules.niriDepsDisksUtil = {pkgs, ...}: {
     environment.systemPackages = [
       pkgs.gnome-disk-utility
     ];
